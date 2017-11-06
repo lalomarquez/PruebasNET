@@ -13,13 +13,13 @@ namespace VideoLibrary
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando!");
-
-            //string link = @"https://www.youtube.com/watch?v=nsEYtDwj3ZU&index=110&list=PL6n9fhu94yhVDV697uvHpavA3K_eWGQap";
-
+            
             var link = new List<string>();
-            link.Add("https://www.youtube.com/watch?v=f79GNqOiDQ8");
-            //link.Add("https://www.youtube.com/watch?v=-47WKM3AeL4");
-
+            link.Add("https://www.youtube.com/watch?v=-tMX36hRSsU");
+            link.Add("https://www.youtube.com/watch?v=uMQwORSTGX4");
+            link.Add("https://www.youtube.com/watch?v=9chTaFuaBcU");
+            link.Add("https://www.youtube.com/watch?v=nP2d3OMrsJA");
+            link.Add("https://www.youtube.com/watch?v=LSHLdJFdfmc");            
 
             foreach (var item in link)
             {
