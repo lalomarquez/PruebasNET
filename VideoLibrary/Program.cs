@@ -12,19 +12,12 @@ namespace VideoLibrary
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Iniciando!");
-            
+            Console.WriteLine("Iniciando!");            
             var link = new List<string>();
-            link.Add("https://www.youtube.com/watch?v=-tMX36hRSsU");
-            link.Add("https://www.youtube.com/watch?v=uMQwORSTGX4");
-            link.Add("https://www.youtube.com/watch?v=9chTaFuaBcU");
-            link.Add("https://www.youtube.com/watch?v=nP2d3OMrsJA");
-            link.Add("https://www.youtube.com/watch?v=LSHLdJFdfmc");            
+            //link.Add("");
 
             foreach (var item in link)
-            {
-                SaveVideoToDisk(item);
-            }            
+                SaveVideoToDisk(item);    
 
             Console.WriteLine("Hecho");
             Console.ReadKey();
@@ -36,10 +29,8 @@ namespace VideoLibrary
             {
                 var youTube = YouTube.Default; // starting point for YouTube actions
                 var video = youTube.GetVideo(link); // gets a Video object with info about the video       
-                Console.WriteLine(video.FullName);
-                
-                File.WriteAllBytes(@"C:\Users\lalomarquez\Desktop\" + video.FullName.Replace("- YouTube", ""), video.GetBytes());
-
+                Console.WriteLine(video.FullName);                
+                File.WriteAllBytes(@"C:\Users\lalomarquez\Desktop\down\" + video.FullName.Replace("- YouTube", ""), video.GetBytes());
                 Console.WriteLine("Descarga realizada!!");
             }
             catch (Exception ex)
